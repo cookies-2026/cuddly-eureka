@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>你的守护灵，来自东方神话的哪一脉？</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{box-sizing:border-box;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+body{margin:0;padding:15px;background:#f3f0ec;color:#222}
+.container{max-width:600px;margin:0 auto;background:#fff;border-radius:20px;padding:25px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.title{font-size:24px;font-weight:bold;text-align:center;margin-bottom:8px}
+.desc{text-align:center;color:#666;margin-bottom:30px}
+.question{font-size:17px;margin-bottom:12px;font-weight:500}
+.option{padding:12px 15px;border:1px solid #ddd;border-radius:12px;margin-bottom:10px;cursor:pointer}
+.option:hover{border-color:#8a6dcf;background:#f8f5ff}
+.option.active{background:#8a6dcf;color:#fff;border-color:#6a4c93}
+.submit{width:100%;padding:15px;background:#6a4c93;color:#fff;border:none;border-radius:14px;font-size:17px;margin-top:20px;cursor:pointer}
+.result{display:none;text-align:center;padding:20px 0}
+.result-title{font-size:22px;font-weight:bold;margin-bottom:15px}
+.result-desc{line-height:1.9;font-size:16px;color:#333}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title">你的守护灵，来自东方神话的哪一脉？</div>
+<div class="desc">每个人都有来自东方的上古守护灵</div>
+
+<div id="questions">
+
+<div class="question">1. 遇到烦心事，你更倾向于？</div>
+<div class="option" data-v="1">独自消化，慢慢自愈</div>
+<div class="option" data-v="2">找人倾诉，寻求安慰</div>
+<div class="option" data-v="3">理性分析，快速解决</div>
+<div class="option" data-v="4">摆烂不管，顺其自然</div>
+
+<div class="question">2. 你更向往哪种生活状态？</div>
+<div class="option" data-v="1">清净自在，远离纷扰</div>
+<div class="option" data-v="2">热闹人间，烟火气足</div>
+<div class="option" data-v="3">仗剑天涯，自由不羁</div>
+<div class="option" data-v="4">身居高位，受人敬仰</div>
+
+<div class="question">3. 面对不公平的事，你会？</div>
+<div class="option" data-v="1">默默忍耐，不愿争执</div>
+<div class="option" data-v="2">内心愤怒，但很少发作</div>
+<div class="option" data-v="3">直接表达，绝不委屈</div>
+<div class="option" data-v="4">冷眼旁观，与我无关</div>
+
+<div class="question">4. 你对“缘分”的看法是？</div>
+<div class="option" data-v="1">深信不疑，一切自有安排</div>
+<div class="option" data-v="2">半信半疑，更信努力</div>
+<div class="option" data-v="3">不太相信，只看现实</div>
+<div class="option" data-v="4">无所谓，开心最重要</div>
+
+<div class="question">5. 你更喜欢的自然场景是？</div>
+<div class="option" data-v="1">深山云海</div>
+<div class="option" data-v="2">江河湖海</div>
+<div class="option" data-v="3">辽阔旷野</div>
+<div class="option" data-v="4">繁华都市</div>
+
+<div class="question">6. 朋友遇到困难，你通常会？</div>
+<div class="option" data-v="1">温柔陪伴，耐心开导</div>
+<div class="option" data-v="2">尽力帮忙，出钱出力</div>
+<div class="option" data-v="3">理性支招，指明方向</div>
+<div class="option" data-v="4">点到为止，不强行介入</div>
+
+<div class="question">7. 你内心更渴望？</div>
+<div class="option" data-v="1">平安顺遂，一生无忧</div>
+<div class="option" data-v="2">轰轰烈烈，不留遗憾</div>
+<div class="option" data-v="3">超凡脱俗，心境自由</div>
+<div class="option" data-v="4">功成名就，被人认可</div>
+
+<div class="question">8. 面对诱惑，你的态度是？</div>
+<div class="option" data-v="1">坚守本心，不为所动</div>
+<div class="option" data-v="2">偶尔动摇，但能克制</div>
+<div class="option" data-v="3">顺势而为，灵活变通</div>
+<div class="option" data-v="4">难以拒绝，容易沉迷</div>
+
+<div class="question">9. 你更像哪种性格？</div>
+<div class="option" data-v="1">温柔包容，共情力强</div>
+<div class="option" data-v="2">正直刚烈，爱憎分明</div>
+<div class="option" data-v="3">聪慧机敏，心思通透</div>
+<div class="option" data-v="4">沉稳内敛，深藏不露</div>
+
+<div class="question">10. 你相信善恶有报吗？</div>
+<div class="option" data-v="1">深信</div>
+<div class="option" data-v="2">比较相信</div>
+<div class="option" data-v="3">不太信</div>
+<div class="option" data-v="4">完全不信</div>
+
+<div class="question">11. 压力大时，你会？</div>
+<div class="option" data-v="1">静心冥想/独处放空</div>
+<div class="option" data-v="2">运动发泄/大吃一顿</div>
+<div class="option" data-v="3">找人吐槽/疯狂购物</div>
+<div class="option" data-v="4">埋头做事，转移注意</div>
+
+<div class="question">12. 你希望自己的守护灵是？</div>
+<div class="option" data-v="1">温柔慈悲的</div>
+<div class="option" data-v="2">威严强大的</div>
+<div class="option" data-v="3">灵动聪慧的</div>
+<div class="option" data-v="4">沉默守护的</div>
+
+<button class="submit" id="submit">查看我的守护灵</button>
+</div>
+
+<div class="result" id="result">
+<div class="result-title" id="r-title"></div>
+<div class="result-desc" id="r-desc"></div>
+</div>
+</div>
+
+<script>
+const opts = document.querySelectorAll('.option');
+let score = 0;
+
+opts.forEach(o => {
+  o.addEventListener('click', () => {
+    o.parentElement.querySelectorAll('.option').forEach(p => p.classList.remove('active'));
+    o.classList.add('active');
+    score += parseInt(o.dataset.v);
+  });
+});
+
+document.getElementById('submit').onclick = function(){
+  let type;
+  if(score <= 16) type = 1;
+  else if(score <= 24) type = 2;
+  else if(score <= 32) type = 3;
+  else if(score <= 40) type = 4;
+  else if(score <= 48) type = 5;
+  else type = 6;
+
+  const res = [
+    {},
+    {title:"昆仑仙脉 · 清逸仙君型",desc:"你的守护灵来自昆仑仙宗，自带清冷仙气。你性格淡然通透，不喜纷争，内心有自己的一方天地。看似温和疏离，实则心怀柔软，习惯默默守护身边人。一生自带清净福报，遇事总能逢凶化吉。"},
+    {title:"四海龙君 · 贵气福运型",desc:"你的守护灵是四海龙族一脉。自带贵气与福运，气场沉稳，有担当、有格局，关键时刻总能挺身而出。你重情重义，人缘极佳，一生多遇贵人，财运与机遇都比常人更丰厚。"},
+    {title:"山林精怪 · 灵动自然型",desc:"你的守护灵来自山林草木，是自然之灵。你活泼灵动，直觉敏锐，热爱自由，讨厌被束缚。内心纯粹干净，像未经雕琢的璞玉，总能在平凡生活里发现乐趣，一生少灾少难，自在快活。"},
+    {title:"佛门护法 · 慈悲安定型",desc:"你的守护灵源自佛门护法一脉。内心善良柔软，共情力极强，见不得他人受苦。性格温和有耐心，自带安定气场，身边人都喜欢依赖你。你一生被善意环绕，多福少祸，晚年尤为安稳。"},
+    {title:"九天战神 · 刚烈守护型",desc:"你的守护灵是上古战将一脉。性格刚烈正直，爱憎分明，有极强的原则与底线。看似不好接近，实则对在意的人极度护短。你自带勇气buff，遇事从不退缩，难关再多也能一一闯过。"},
+    {title:"幽冥阴司 · 沉稳宿命型",desc:"你的守护灵来自幽冥宿命一脉。你心思深沉，洞察力极强，总能看透事物本质。不爱张扬，习惯沉默观察，看似冷淡，实则内心通透。你自带避凶气场，小人难近，一生少走弯路，大器晚成。"}
+  ];
+
+  document.getElementById('questions').style.display = 'none';
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('r-title').innerText = res[type].title;
+  document.getElementById('r-desc').innerText = res[type].desc;
+}
+</script>
+</body>
+</html>
